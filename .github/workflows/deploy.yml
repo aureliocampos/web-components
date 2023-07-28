@@ -36,13 +36,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm install
-      - run: npm run build-storybook
+      - run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: storybook-static
+          source: dist
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
