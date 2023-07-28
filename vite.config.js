@@ -7,8 +7,8 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       output: {
-        entryFileNames: "./[name].js",
-        assetFileNames: `./[name].[ext]`,
+        entryFileNames: "[name].js",
+        assetFileNames: `assets/[name].[ext]`,
       },
     },
   },
