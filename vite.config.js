@@ -2,12 +2,13 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: "",
   build: {
     sourcemap: true,
     manifest: true,
     rollupOptions: {
       output: {
-        entryFileNames: "lib/[name].js",
+        entryFileNames: "[name].js",
         assetFileNames: `assets/[name].[ext]`,
       },
     },
